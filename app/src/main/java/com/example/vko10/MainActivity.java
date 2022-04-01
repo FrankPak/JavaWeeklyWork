@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void siterefresh(View v){
-        web.reload();
+        String currentSiteUrl = web.getUrl();
+        web.loadUrl(currentSiteUrl);
     }
     public void searchUrl(View v){
         String textUrl = url.getText().toString();
